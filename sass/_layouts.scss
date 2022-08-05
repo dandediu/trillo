@@ -9,7 +9,11 @@
 
 .header {
     height: 7rem;
-    background-color: var(--color-grey-light-2);
+    background-color: var(--color-grey-light-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
 }
 
 .content {
