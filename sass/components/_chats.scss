@@ -1,0 +1,27 @@
+.chats {
+    width: 200px;
+    padding: 2rem;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__name {
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    &__description {
+        color: var(--color-primary);
+        font-size: 1rem;
+    }
+}

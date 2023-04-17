@@ -1,3 +1,20 @@
 @import 'base';
 @import 'layouts';
-@import 'components';
+
+/* COMPONENTS */
+@import './components/drop-down';
+@import './components/chats';
+@import './components/button';
+@import './components/cta';
+@import './components/reviews';
+@import './components/recommend';
+@import './components/button-inline';
+@import './components/overview';
+@import './components/list';
+@import './components/legal';
+@import './components/gallery';
+@import './components/side-nav';
+@import './components/user-nav';
+@import './components/search';
+@import './components/logo';
+@import './components/paragraph';
