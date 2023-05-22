@@ -9,6 +9,7 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --color-white: #fff;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --line: 1px solid var(--color-grey-light-2); }
@@ -53,7 +54,7 @@ body {
 
 .header {
   height: 7rem;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
@@ -79,7 +80,7 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  background-color: #fff;
+  background-color: var(--color-white);
   flex: 1; }
 
 .detail {
@@ -96,7 +97,7 @@ body {
       flex-direction: column; } }
 
 .description {
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: var(--shadow-light);
   flex: 0 0 60%;
   padding: 3rem;
@@ -117,34 +118,32 @@ body {
   align-items: center; }
 
 /* COMPONENTS */
-.drop-down {
+.dropdown {
   position: relative; }
-  .drop-down__content {
+  .dropdown__list {
+    min-width: 20rem;
+    list-style: none;
     position: absolute;
     display: none;
     z-index: 100;
-    background-color: var(--color-grey-light-1);
+    background-color: var(--color-white);
     top: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    left: -30px; }
-    .drop-down__content--open {
+    right: 0; }
+    .dropdown__list--open {
       display: block; }
-
-.chats {
-  width: 200px;
-  padding: 2rem; }
-  .chats__list {
-    list-style: none; }
-  .chats__list-item {
+  .dropdown__link {
     display: flex;
-    flex-direction: column; }
-    .chats__list-item:not(:last-child) {
-      margin-bottom: 1rem; }
-  .chats__name {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--color-grey-dark-2);
+    background-color: var(--color-grey-light-2); }
+    .dropdown__link:hover {
+      background-color: var(--color-white); }
+  .dropdown__item-name {
     text-transform: capitalize;
     font-weight: bold; }
-  .chats__description {
+  .dropdown__item-details {
     color: var(--color-primary);
     font-size: 1rem; }
 
@@ -158,7 +157,7 @@ body {
   border-radius: 100px;
   border: none;
   background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
-  color: #fff;
+  color: var(--color-white);
   position: relative;
   overflow: hidden;
   cursor: pointer; }
@@ -204,7 +203,7 @@ body {
     REVIEWS
 *************************************/
 .review {
-  background: #fff;
+  background: var(--color-white);
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
@@ -255,7 +254,7 @@ body {
     REVIEWS
 *************************************/
 .review {
-  background: #fff;
+  background: var(--color-white);
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
@@ -359,7 +358,7 @@ body {
   .overview__rating {
     background-color: var(--color-primary);
     margin-left: 3rem;
-    color: #fff;
+    color: var(--color-white);
     align-self: stretch;
     padding: 0 2.25rem;
     display: flex;
@@ -509,30 +508,41 @@ body {
   align-self: stretch;
   display: flex;
   align-items: center; }
-  .user-nav > * {
-    padding: 0 2rem;
+  .user-nav__button {
+    border: none;
+    background: transparent;
+    padding: 2.3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--color-grey-dark-2);
     cursor: pointer;
+    font-weight: 300; }
+    .user-nav__button:hover, .user-nav__button:active {
+      background-color: var(--color-grey-light-2); }
+    .user-nav__button--profile {
+      padding: 1.6rem; }
+    .user-nav__button--active {
+      background-color: var(--color-grey-light-2); }
+  .user-nav__icon-box {
+    position: relative;
     height: 100%;
     display: flex;
     align-items: center; }
-  .user-nav > *:hover {
-    background-color: var(--color-grey-light-2); }
-  .user-nav__icon-box {
-    position: relative; }
   .user-nav__icon {
-    height: 2.25rem;
-    width: 2.25rem;
+    height: 2.3rem;
+    width: 2.3rem;
     fill: var(--color-grey-dark-2); }
   .user-nav__notification {
     font-size: 0.8rem;
-    height: 1.75rem;
-    width: 1.75rem;
+    height: 1.8rem;
+    width: 1.8rem;
     border-radius: 50%;
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     position: absolute;
-    top: 1.5rem;
-    right: 1.1rem;
+    top: 1.2rem;
+    right: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center; }

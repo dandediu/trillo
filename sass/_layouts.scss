@@ -14,7 +14,7 @@
 
 .header {
     height: 7rem;
-    background-color: #fff;
+    background-color: var(--color-white);
     border-bottom: var(--line);
 
     display: flex;
@@ -46,7 +46,7 @@
 }
 
 .hotel-view {
-    background-color: #fff;
+    background-color: var(--color-white);
     flex: 1;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .description {
-    background-color: #fff;
+    background-color: var(--color-white);
     box-shadow: var(--shadow-light);
     flex: 0 0 60%;
     padding: 3rem;
