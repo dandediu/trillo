@@ -22,6 +22,7 @@
         "url": "https://github.com/dandediu/trillo/issues"
     },
     "homepage": "https://github.com/dandediu/trillo#readme",
+    "type": "module",
     "devDependencies": {
         "autoprefixer": "^10.4.7",
         "live-server": "^1.2.2",

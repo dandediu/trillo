@@ -10,6 +10,7 @@
         />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+        <script type="module" src="./index.js"></script>
 
         <title>Trillo &mdash; Your all-in-one booking app</title>
     </head>
@@ -35,27 +36,57 @@
                 </form>
 
                 <nav class="user-nav">
-                    <div class="user-nav__icon-box">
-                        <svg class="user-nav__icon">
-                            <use
-                                xlink:href="img/sprite.svg#icon-bookmark"
-                            ></use>
-                        </svg>
-                        <span class="user-nav__notification"> 12 </span>
+                    <div class="dropdown">
+                        <button
+                            id="bookmarks"
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                            class="user-nav__button"
+                        >
+                            <svg class="user-nav__icon">
+                                <use
+                                    xlink:href="img/sprite.svg#icon-bookmark"
+                                ></use>
+                            </svg>
+                            <span class="user-nav__notification"> 12 </span>
+                        </button>
+                        <div class="dropdown__list"></div>
                     </div>
-                    <div class="user-nav__icon-box">
-                        <svg class="user-nav__icon">
-                            <use xlink:href="img/sprite.svg#icon-chat"></use>
-                        </svg>
-                        <span class="user-nav__notification"> 3 </span>
+
+                    <!-- CHAT DROPDOWN START -->
+                    <div class="dropdown">
+                        <button
+                            id="chats"
+                            data-toggle="dropdown"
+                            data-active="user-nav__button--active"
+                            aria-expanded="false"
+                            class="user-nav__button"
+                        >
+                            <svg class="user-nav__icon">
+                                <use
+                                    xlink:href="img/sprite.svg#icon-chat"
+                                ></use>
+                            </svg>
+                            <span class="user-nav__notification"> 3 </span>
+                        </button>
+                        <ul class="dropdown__list"></ul>
                     </div>
-                    <div class="user-nav__user">
-                        <img
-                            src="img/user.jpg"
-                            alt="User Photo"
-                            class="user-nav__user-photo"
-                        />
-                        <span class="user-nav__user-name">Jonas</span>
+
+                    <!-- /CHAT DROPDOWN END -->
+                    <div class="dropdown">
+                        <button
+                            id="profile"
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                            class="user-nav__button user-nav__button--profile"
+                        >
+                            <img
+                                src="img/user.jpg"
+                                alt="User Photo"
+                                class="user-nav__user-photo"
+                            />
+                            <span class="user-nav__user-name">Jonas</span>
+                        </button>
                     </div>
                 </nav>
             </header>
@@ -292,6 +323,7 @@
                             </button>
                         </div>
                     </div>
+                    <!-- CALL TO ACTION START -->
                     <div class="cta">
                         <h2 class="cta__book-now">
                             Good news! We have 4 free rooms for your selected
@@ -304,6 +336,7 @@
                             </span>
                         </button>
                     </div>
+                    <!-- / CALL TO ACTION START -->
                 </main>
             </div>
         </div>
